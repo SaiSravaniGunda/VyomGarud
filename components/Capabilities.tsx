@@ -48,7 +48,7 @@ export default function Capabilities() {
     <section
       id="capabilities"
       ref={ref}
-      className="py-24 sm:py-32 bg-charcoal relative overflow-hidden"
+      className="py-16 sm:py-24 md:py-32 bg-charcoal relative overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem]" />
@@ -58,18 +58,18 @@ export default function Capabilities() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 px-2">
             Our <span className="text-primary-orange">Capabilities</span>
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto px-2">
             Comprehensive UAV solutions engineered for mission-critical
             operations
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
           {capabilities.map((capability, index) => (
             <motion.div
               key={index}
@@ -80,19 +80,19 @@ export default function Capabilities() {
               className="group relative"
             >
               <div
-                className={`h-full p-8 rounded-lg border ${capability.borderColor} bg-gradient-to-br ${capability.color} backdrop-blur-sm transition-all duration-300 hover:border-primary-orange/50`}
+                className={`h-full p-6 sm:p-8 rounded-lg border ${capability.borderColor} bg-gradient-to-br ${capability.color} backdrop-blur-sm transition-all duration-300 hover:border-primary-orange/50`}
               >
-                <div className="flex items-start gap-6">
+                <div className="flex items-start gap-4 sm:gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-14 h-14 rounded-lg bg-primary-orange/20 flex items-center justify-center border border-primary-orange/30 group-hover:bg-primary-orange/30 transition-colors">
-                      <capability.icon className="w-7 h-7 text-primary-orange" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-primary-orange/20 flex items-center justify-center border border-primary-orange/30 group-hover:bg-primary-orange/30 transition-colors">
+                      <capability.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-orange" />
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-primary-orange transition-colors">
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 group-hover:text-primary-orange transition-colors">
                       {capability.title}
                     </h3>
-                    <p className="text-gray-400 leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                       {capability.description}
                     </p>
                   </div>

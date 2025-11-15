@@ -12,7 +12,7 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className="py-24 sm:py-32 bg-charcoal-light relative overflow-hidden"
+      className="py-16 sm:py-24 md:py-32 bg-charcoal-light relative overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem]" />
@@ -25,7 +25,7 @@ export default function About() {
           className="max-w-4xl mx-auto text-center"
         >
           <motion.h2
-            className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-2"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -34,7 +34,7 @@ export default function About() {
             <span className="text-primary-orange">Excellence</span>
           </motion.h2>
           <motion.p
-            className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-8"
+            className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed mb-6 sm:mb-8 px-2"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -46,7 +46,7 @@ export default function About() {
             engineering, advanced autonomy, and unwavering reliability.
           </motion.p>
           <motion.p
-            className="text-base sm:text-lg text-gray-400 leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed px-2"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.6 }}
