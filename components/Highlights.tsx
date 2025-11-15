@@ -30,7 +30,7 @@ export default function Highlights() {
   return (
     <section
       ref={ref}
-      className="py-24 sm:py-32 bg-charcoal-light relative overflow-hidden"
+      className="py-16 sm:py-24 md:py-32 bg-charcoal-light relative overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem]" />
@@ -43,7 +43,7 @@ export default function Highlights() {
           className="max-w-5xl mx-auto"
         >
           <motion.h2
-            className="text-4xl sm:text-5xl md:text-6xl font-bold mb-16 text-center"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-12 sm:mb-16 text-center px-2"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -51,25 +51,25 @@ export default function Highlights() {
             Why <span className="text-primary-orange">VyomGarud</span>
           </motion.h2>
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {highlights.map((highlight, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
-                className="flex gap-6 items-start group"
+                className="flex gap-4 sm:gap-6 items-start group"
               >
                 <div className="flex-shrink-0 mt-1">
-                  <div className="w-12 h-12 rounded-full bg-primary-orange/20 flex items-center justify-center border border-primary-orange/30 group-hover:bg-primary-orange/30 transition-colors">
-                    <CheckCircle2 className="w-6 h-6 text-primary-orange" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary-orange/20 flex items-center justify-center border border-primary-orange/30 group-hover:bg-primary-orange/30 transition-colors">
+                    <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-primary-orange" />
                   </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-semibold mb-2 group-hover:text-primary-orange transition-colors">
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-2 group-hover:text-primary-orange transition-colors">
                     {highlight.title}
                   </h3>
-                  <p className="text-gray-400 text-lg leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed">
                     {highlight.description}
                   </p>
                 </div>
