@@ -79,7 +79,7 @@ export default function Contact() {
                 </h3>
                 <p className="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8">
                   Reach out to our team for inquiries, partnerships, or support.
-                  We're here to help you find the right UAV solution for your
+                  We&apos;re here to help you find the right UAV solution for your
                   needs.
                 </p>
               </div>
